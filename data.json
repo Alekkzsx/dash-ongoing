@@ -54,6 +54,18 @@
         "dateTime": "2025-10-15T17:31:56.318Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "db60e58f-6812-4213-8f34-bc4e70e14d3e",
+        "orderId": "702-8729906-8581828",
+        "productName": "fdvcd",
+        "quantity": 1,
+        "amount": 221,
+        "feitoPor": "ae",
+        "fornecedor": "amz",
+        "dateTime": "2025-10-15T17:32:05.822Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
