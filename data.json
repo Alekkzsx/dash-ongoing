@@ -69,18 +69,6 @@
         "category": "custo-produto"
       },
       {
-        "id": "d015a7a9-1be6-42dc-bbee-4db1d71a6e9f",
-        "orderId": "702-8729906-8581824",
-        "productName": "fa",
-        "quantity": 0,
-        "amount": 0,
-        "feitoPor": "alek",
-        "fornecedor": "pp",
-        "dateTime": "2025-10-15T17:58:45.471Z",
-        "type": "despesa",
-        "category": "custo-produto"
-      },
-      {
         "id": "7ee73164-dae9-45fd-9bf2-9d4552d51458",
         "orderId": "705-8729906-8581828",
         "productName": "pep",
