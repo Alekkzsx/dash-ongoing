@@ -79,6 +79,18 @@
         "dateTime": "2025-10-15T17:58:45.471Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "7ee73164-dae9-45fd-9bf2-9d4552d51458",
+        "orderId": "705-8729906-8581828",
+        "productName": "pep",
+        "quantity": 1,
+        "amount": 3,
+        "feitoPor": "alek",
+        "fornecedor": "",
+        "dateTime": "2025-10-15T18:11:51.876Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
