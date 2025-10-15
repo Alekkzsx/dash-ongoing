@@ -14,6 +14,14 @@
         "date": "2025-10-15",
         "category": "venda-produto",
         "type": "receita"
+      },
+      {
+        "id": "33033faf-cb3b-499e-8476-b85c748755d2",
+        "description": "dew",
+        "amount": 6,
+        "date": "2025-10-15",
+        "category": "salario",
+        "type": "despesa"
       }
     ]
   }
