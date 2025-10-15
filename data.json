@@ -62,7 +62,7 @@
         "quantity": 1,
         "amount": 221,
         "feitoPor": "açuis",
-        "fornecedor": "amz",
+        "fornecedor": "pp",
         "dateTime": "2025-10-15T17:32:05.822Z",
         "type": "despesa",
         "category": "custo-produto"
