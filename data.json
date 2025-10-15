@@ -30,6 +30,18 @@
         "dateTime": "2025-10-15T17:21:47.681Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "34283a47-0cbe-4a44-b490-4897cf76476a",
+        "orderId": "702-8729906-8581828",
+        "productName": "cfer",
+        "quantity": 1,
+        "amount": 23,
+        "feitoPor": "ew",
+        "fornecedor": "",
+        "dateTime": "2025-10-15T17:24:21.481Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
