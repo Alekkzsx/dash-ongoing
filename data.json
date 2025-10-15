@@ -18,6 +18,18 @@
         "dateTime": "2025-10-15T17:21:42.618Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "13b5903c-8181-49e0-a44b-a66d8696e7e7",
+        "orderId": "702-8729906-8581828",
+        "productName": "erger",
+        "quantity": 1,
+        "amount": 21,
+        "feitoPor": "alek",
+        "fornecedor": "",
+        "dateTime": "2025-10-15T17:21:47.681Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
