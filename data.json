@@ -6,6 +6,19 @@
     }
   ],
   "transactions": {
-    "infiverye.boss@gmail.com": []
+    "infiverye.boss@gmail.com": [
+      {
+        "id": "6ca8bdca-d9b7-40a4-873f-23e3f0ddd206",
+        "orderId": "702-8729906-8581828",
+        "productName": "erger",
+        "quantity": 1,
+        "amount": 23,
+        "feitoPor": "alek",
+        "fornecedor": "",
+        "dateTime": "2025-10-15T17:21:42.618Z",
+        "type": "receita",
+        "category": "venda-produto"
+      }
+    ]
   }
 }
