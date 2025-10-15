@@ -103,6 +103,18 @@
         "dateTime": "2025-10-15T19:25:49.729Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "261b34bf-8586-4c1f-a7fc-c9f232d37881",
+        "orderId": "702-8729906-8581820",
+        "productName": "2",
+        "quantity": 1,
+        "amount": 23,
+        "feitoPor": "infiverye.boss@gmail.com",
+        "fornecedor": "pep",
+        "dateTime": "2025-10-15T19:26:00.849Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
