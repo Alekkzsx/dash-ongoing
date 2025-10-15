@@ -6,6 +6,15 @@
     }
   ],
   "transactions": {
-    "infiverye.boss@gmail.com": []
+    "infiverye.boss@gmail.com": [
+      {
+        "id": "827d41a1-a23d-48f4-bd5d-ef3d609bb19f",
+        "description": "sfrs",
+        "amount": 10,
+        "date": "2025-10-15",
+        "category": "venda-produto",
+        "type": "receita"
+      }
+    ]
   }
 }
