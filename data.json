@@ -127,6 +127,18 @@
         "dateTime": "2025-10-15T19:44:21.885Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "0adf60b7-d75d-466d-a07e-51ed8e139d5e",
+        "orderId": "702-8729906-8581822",
+        "productName": "teste",
+        "quantity": 1,
+        "amount": 27,
+        "feitoPor": "",
+        "fornecedor": "amz",
+        "dateTime": "2025-10-15T19:44:29.860Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
