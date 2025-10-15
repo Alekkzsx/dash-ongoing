@@ -66,6 +66,18 @@
         "dateTime": "2025-10-15T17:32:05.822Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "acff24c6-8e89-4d5d-bd73-c9ef0cc77015",
+        "orderId": "702-8729906-8581822",
+        "productName": "dvd",
+        "quantity": 1,
+        "amount": 34,
+        "feitoPor": "alek",
+        "fornecedor": "",
+        "dateTime": "2025-10-15T17:43:13.644Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
