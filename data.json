@@ -2,7 +2,8 @@
   "users": [
     {
       "email": "infiverye.boss@gmail.com",
-      "passwordHash": "96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e"
+      "passwordHash": "96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e",
+      "displayName": "Roveriee"
     }
   ],
   "transactions": {
@@ -68,50 +69,74 @@
         "category": "custo-produto"
       },
       {
-        "id": "acff24c6-8e89-4d5d-bd73-c9ef0cc77015",
-        "orderId": "702-8729906-8581822",
-        "productName": "dvd",
+        "id": "7ee73164-dae9-45fd-9bf2-9d4552d51458",
+        "orderId": "705-8729906-8581828",
+        "productName": "pep",
         "quantity": 1,
-        "amount": 34,
+        "amount": 3,
         "feitoPor": "alek",
         "fornecedor": "",
-        "dateTime": "2025-10-15T17:43:13.644Z",
+        "dateTime": "2025-10-15T18:11:51.876Z",
         "type": "receita",
         "category": "venda-produto"
       },
       {
-        "id": "7794cf26-c6ae-4ab1-bb71-ac7e7250ab6a",
-        "orderId": "702-8729906-8581822",
-        "productName": "dvd",
+        "id": "26726548-6eb0-4c00-8ecc-4bbd57cf2cf1",
+        "orderId": "705-8729906-8581828",
+        "productName": "pep",
         "quantity": 1,
-        "amount": 32,
-        "feitoPor": "alek",
+        "amount": 233,
+        "feitoPor": "infiverye.boss@gmail.com",
         "fornecedor": "amz",
-        "dateTime": "2025-10-15T17:43:21.707Z",
+        "dateTime": "2025-10-15T18:12:02.020Z",
         "type": "despesa",
         "category": "custo-produto"
       },
       {
-        "id": "e033f63e-6090-4c6d-8b10-9a266a9664cb",
-        "orderId": "702-8729906-8581824",
-        "productName": "fa",
+        "id": "96c704d5-518a-4d82-92b2-2656ae4a946a",
+        "orderId": "702-8729906-8581820",
+        "productName": "2",
         "quantity": 1,
-        "amount": 222222,
-        "feitoPor": "dea",
+        "amount": 2,
+        "feitoPor": "sfs",
         "fornecedor": "",
-        "dateTime": "2025-10-15T17:58:38.912Z",
+        "dateTime": "2025-10-15T19:25:49.729Z",
         "type": "receita",
         "category": "venda-produto"
       },
       {
-        "id": "d015a7a9-1be6-42dc-bbee-4db1d71a6e9f",
-        "orderId": "702-8729906-8581824",
-        "productName": "fa",
-        "quantity": 0,
-        "amount": 0,
+        "id": "261b34bf-8586-4c1f-a7fc-c9f232d37881",
+        "orderId": "702-8729906-8581820",
+        "productName": "2",
+        "quantity": 1,
+        "amount": 23,
         "feitoPor": "infiverye.boss@gmail.com",
-        "fornecedor": "pp",
-        "dateTime": "2025-10-15T17:58:45.471Z",
+        "fornecedor": "pep",
+        "dateTime": "2025-10-15T19:26:00.849Z",
+        "type": "despesa",
+        "category": "custo-produto"
+      },
+      {
+        "id": "d3d72923-defe-4cc4-bf0e-d80a2f00d3db",
+        "orderId": "702-8729906-8581822",
+        "productName": "teste",
+        "quantity": 1,
+        "amount": 22,
+        "feitoPor": "alek",
+        "fornecedor": "",
+        "dateTime": "2025-10-15T19:44:21.885Z",
+        "type": "receita",
+        "category": "venda-produto"
+      },
+      {
+        "id": "0adf60b7-d75d-466d-a07e-51ed8e139d5e",
+        "orderId": "702-8729906-8581822",
+        "productName": "teste",
+        "quantity": 1,
+        "amount": 27,
+        "feitoPor": "",
+        "fornecedor": "amz",
+        "dateTime": "2025-10-15T19:44:29.860Z",
         "type": "despesa",
         "category": "custo-produto"
       }
