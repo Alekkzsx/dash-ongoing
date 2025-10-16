@@ -58,15 +58,34 @@
         #sidebar, #main-content {
             transition: all 0.3s ease-in-out;
         }
+        
+        /* Toast Notification */
+        #toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%, 150%);
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease-in-out;
+            z-index: 100;
+        }
+        #toast.show {
+            transform: translate(-50%, 0);
+        }
     </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 antialiased">
+    
+    <!-- Toast Notification Container -->
+    <div id="toast"></div>
 
     <!-- Tela de Carregamento Inicial -->
     <div id="loading-screen" class="fixed inset-0 bg-white dark:bg-gray-900 flex items-center justify-center z-50">
         <div class="flex flex-col items-center text-center p-4">
             <div class="spinner"></div>
-            <p id="loading-message" class="mt-4 text-lg font-medium text-gray-600 dark:text-gray-400">Carregando dados do GitHub...</p>
+            <p id="loading-message" class="mt-4 text-lg font-medium text-gray-600 dark:text-gray-400">Carregando...</p>
         </div>
     </div>
 
@@ -180,10 +199,10 @@
             <div id="dashboard-view" class="view">
                 <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Painel Principal</h2>
                 <!-- Cards de Métricas -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
                     <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md"><h3 class="text-gray-500 dark:text-gray-400 font-medium">Saldo Atual</h3><p id="balance" class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mt-2">R$ 0,00</p></div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md"><h3 class="text-gray-500 dark:text-gray-400 font-medium">Receita Total</h3><p id="total-revenue" class="text-3xl font-bold text-green-500 mt-2">R$ 0,00</p></div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md"><h3 class="text-gray-500 dark:text-gray-400 font-medium">Despesa Total</h3><p id="total-expense" class="text-3xl font-bold text-red-500 mt-2">R$ 0,00</p></div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md"><h3 class="text-gray-500 dark:text-gray-400 font-medium">Lucro Total</h3><p id="total-profit" class="text-3xl font-bold text-green-500 mt-2">R$ 0,00</p></div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md"><h3 class="text-gray-500 dark:text-gray-400 font-medium">Margem de Lucro</h3><p id="profit-margin" class="text-3xl font-bold text-sky-500 mt-2">0.00%</p></div>
                     <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md space-y-2">
                         <div><h3 class="text-gray-500 dark:text-gray-400 font-medium">Dia de Pico</h3><p id="peak-day" class="text-lg font-bold text-gray-800 dark:text-gray-200">N/A</p></div>
                         <div><h3 class="text-gray-500 dark:text-gray-400 font-medium">Mês de Pico</h3><p id="peak-month" class="text-lg font-bold text-gray-800 dark:text-gray-200">N/A</p></div>
@@ -222,11 +241,11 @@
                                 <label for="transaction-type" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Tipo de Transação</label>
                                 <select id="transaction-type" class="w-full p-3 bg-gray-100 dark:bg-gray-700 rounded-lg border dark:border-gray-600 focus:ring-2 focus:ring-indigo-500">
                                     <option value="receita">Receita (Venda)</option>
-                                    <option value="despesa">Despesa</option>
+                                    <option value="despesa">Despesa (Compra de Estoque)</option>
                                 </select>
                             </div>
                             <div class="md:col-span-2">
-                                <label for="order-id" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">ID do Pedido (Opcional para despesas)</label>
+                                <label for="order-id" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">ID do Pedido</label>
                                 <input type="text" id="order-id" placeholder="Ex: 702-8729906-8581828" pattern="\d{3}-\d{7}-\d{7}" class="w-full p-3 bg-gray-100 dark:bg-gray-700 rounded-lg border dark:border-gray-600 focus:ring-2 focus:ring-indigo-500">
                             </div>
                             <div class="md:col-span-2">
@@ -246,7 +265,7 @@
                                 <label for="feito-por" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Feito Por (Comprador)</label>
                                 <input type="text" id="feito-por" placeholder="Nome de quem fez o pedido" class="w-full p-3 bg-gray-100 dark:bg-gray-700 rounded-lg border dark:border-gray-600 focus:ring-2 focus:ring-indigo-500">
                             </div>
-                             <div id="fornecedor-field" class="md:col-span-2">
+                             <div id="fornecedor-field" class="md:col-span-2 hidden">
                                 <label for="fornecedor" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Fornecedor</label>
                                 <input type="text" id="fornecedor" placeholder="Nome do fornecedor" class="w-full p-3 bg-gray-100 dark:bg-gray-700 rounded-lg border dark:border-gray-600 focus:ring-2 focus:ring-indigo-500">
                             </div>
@@ -318,6 +337,27 @@
                 </div>
             </div>
             
+            <!-- View: Inventário -->
+            <div id="inventory-view" class="view hidden">
+                 <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Controle de Inventário</h2>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md">
+                     <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-gray-100 dark:bg-gray-700">
+                                <tr>
+                                    <th class="p-3">Produto</th>
+                                    <th class="p-3">Estoque Atual</th>
+                                </tr>
+                            </thead>
+                            <tbody id="inventory-table-body">
+                                <!-- Linhas da tabela serão inseridas aqui -->
+                            </tbody>
+                        </table>
+                        <p id="no-inventory-msg" class="text-gray-500 dark:text-gray-400 text-center py-10 hidden">Nenhum produto no inventário. Registre compras de estoque.</p>
+                    </div>
+                </div>
+            </div>
+            
             <!-- View: Configurações -->
             <div id="settings-view" class="view hidden">
                 <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Configurações</h2>
@@ -328,7 +368,7 @@
                         <div class="flex items-center justify-between">
                             <span class="text-gray-700 dark:text-gray-300">Modo Escuro</span>
                             <button id="theme-toggle" class="relative inline-flex items-center h-6 rounded-full w-11 transition-colors bg-gray-200 dark:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                                <span id="theme-toggle-handle" class="inline-block w-4 h-4 transform bg-white rounded-full transition-transform translate-x-1 dark:translate-x-6"></span>
+                                <span id="theme-toggle-handle" class="inline-block w-4 h-4 transform bg-white rounded-full transition-transform"></span>
                             </button>
                         </div>
                     </div>
@@ -364,9 +404,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Views Placeholder -->
-            <div id="inventory-view" class="view hidden"><h2 class="text-3xl font-bold text-gray-900 dark:text-white">Controle de Inventário (Em Breve)</h2></div>
             
         </main>
     </div>
@@ -395,9 +432,11 @@
             fornecedorField: document.getElementById('fornecedor-field'),
             historyTableBody: document.getElementById('history-table-body'),
             noHistoryMsg: document.getElementById('no-history-msg'),
+            inventoryTableBody: document.getElementById('inventory-table-body'),
+            noInventoryMsg: document.getElementById('no-inventory-msg'),
             balanceDisplay: document.getElementById('balance'),
-            totalRevenueDisplay: document.getElementById('total-revenue'),
-            totalExpenseDisplay: document.getElementById('total-expense'),
+            totalProfitDisplay: document.getElementById('total-profit'),
+            profitMarginDisplay: document.getElementById('profit-margin'),
             peakDayDisplay: document.getElementById('peak-day'),
             peakMonthDisplay: document.getElementById('peak-month'),
             chartDataSelect: document.getElementById('chart-data-select'),
@@ -423,39 +462,51 @@
             themeToggleHandle: document.getElementById('theme-toggle-handle'),
             changeDisplayNameForm: document.getElementById('change-display-name-form'),
             changePasswordForm: document.getElementById('change-password-form'),
+            toast: document.getElementById('toast'),
         };
 
         // --- ESTADO DA APLICAÇÃO ---
-        const githubConfig = { user: 'Alekkzsx', repo: 'dash-ongoing', token: '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' };
-        const DATA_FILE_PATH = 'data.json';
-        let fullData = { users: [], transactions: {} };
-        let fileSha = null;
-        let loggedInUser = null;
-        let mainChart;
-        let pendingRevenueTransaction = null;
-        let historyState = { currentPage: 1, itemsPerPage: 10, searchQuery: '', startDate: '', endDate: '' };
+        let state = {
+            githubConfig: { user: 'Alekkzsx', repo: 'dash-ongoing', token: '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' },
+            fullData: { users: [], transactions: {} },
+            fileSha: null,
+            loggedInUser: null,
+            mainChart: null,
+            pendingRevenueTransaction: null,
+            history: { currentPage: 1, itemsPerPage: 10, searchQuery: '', startDate: '', endDate: '' },
+        };
 
-        // --- INICIALIZAÇÃO E ROTEAMENTO ---
-        async function init() {
+        // --- INICIALIZAÇÃO E FLUXO PRINCIPAL ---
+        function init() {
             setupEventListeners();
             setupRouting();
             
-            try {
+            showScreen('loading');
+            dom.loadingMessage.textContent = 'Carregando usuários...';
+
+            loadDataAndStartApp();
+        }
+
+        async function loadDataAndStartApp() {
+             try {
                 await loadDataFromGithub();
+                state.loggedInUser = sessionStorage.getItem('loggedInUser');
+                
+                if (state.loggedInUser && state.fullData.users.some(u => u.email === state.loggedInUser)) {
+                    enterDashboard();
+                } else {
+                    sessionStorage.removeItem('loggedInUser');
+                    state.loggedInUser = null;
+                    showScreen('auth');
+                }
             } catch (error) {
                 console.error("Erro Crítico na Inicialização:", error);
-            }
-            
-            loggedInUser = sessionStorage.getItem('loggedInUser');
-            if (fileSha !== 'failed' && loggedInUser && fullData.users.some(u => u.email === loggedInUser)) {
-                enterDashboard();
-            } else {
-                sessionStorage.removeItem('loggedInUser');
-                loggedInUser = null;
-                showScreen('auth');
+                showToast(`Erro na inicialização: ${error.message}`, 'error');
+                showScreen('auth'); 
             }
         }
         
+        // --- LÓGICA DE ROTEAMENTO E EVENTOS ---
         function setupRouting() {
             const sidebarLinks = document.querySelectorAll('.sidebar-link');
             sidebarLinks.forEach(link => {
@@ -484,12 +535,12 @@
             dom.cancelExpenseBtn.addEventListener('click', () => dom.expenseModal.classList.add('hidden'));
             dom.transactionTypeSelect.addEventListener('change', toggleTransactionFields);
 
-            dom.searchInput.addEventListener('input', () => { historyState.searchQuery = dom.searchInput.value; historyState.currentPage = 1; updateHistoryView(); });
-            dom.dateStartInput.addEventListener('change', () => { historyState.startDate = dom.dateStartInput.value; historyState.currentPage = 1; updateHistoryView(); });
-            dom.dateEndInput.addEventListener('change', () => { historyState.endDate = dom.dateEndInput.value; historyState.currentPage = 1; updateHistoryView(); });
-            dom.resultsPerPageSelect.addEventListener('change', () => { historyState.itemsPerPage = parseInt(dom.resultsPerPageSelect.value); historyState.currentPage = 1; updateHistoryView(); });
-            dom.prevPageBtn.addEventListener('click', () => { if (historyState.currentPage > 1) { historyState.currentPage--; updateHistoryView(); } });
-            dom.nextPageBtn.addEventListener('click', () => { historyState.currentPage++; updateHistoryView(); });
+            dom.searchInput.addEventListener('input', () => { state.history.searchQuery = dom.searchInput.value; state.history.currentPage = 1; updateHistoryView(); });
+            dom.dateStartInput.addEventListener('change', () => { state.history.startDate = dom.dateStartInput.value; state.history.currentPage = 1; updateHistoryView(); });
+            dom.dateEndInput.addEventListener('change', () => { state.history.endDate = dom.dateEndInput.value; state.history.currentPage = 1; updateHistoryView(); });
+            dom.resultsPerPageSelect.addEventListener('change', () => { state.history.itemsPerPage = parseInt(dom.resultsPerPageSelect.value); state.history.currentPage = 1; updateHistoryView(); });
+            dom.prevPageBtn.addEventListener('click', () => { if (state.history.currentPage > 1) { state.history.currentPage--; updateHistoryView(); } });
+            dom.nextPageBtn.addEventListener('click', () => { state.history.currentPage++; updateHistoryView(); });
             
             dom.cancelEditBtn.addEventListener('click', () => dom.editModal.classList.add('hidden'));
             dom.editModalForm.addEventListener('submit', handleUpdateTransaction);
@@ -508,25 +559,29 @@
         }
 
         function enterDashboard() {
-            const user = fullData.users.find(u => u.email === loggedInUser);
-            dom.userEmailSidebar.textContent = user?.displayName || loggedInUser;
+            const user = state.fullData.users.find(u => u.email === state.loggedInUser);
+            dom.userEmailSidebar.textContent = user?.displayName || state.loggedInUser;
             updateAllUI();
             showScreen('app');
         }
 
+        // --- LÓGICA DE UI ---
         function toggleTransactionFields() {
             const type = dom.transactionTypeSelect.value;
             const btnText = dom.transactionForm.querySelector('.btn-text');
-            // Apenas ajusta o texto do botão e os campos obrigatórios, sem esconder os campos.
             if (type === 'receita') {
+                dom.feitoPorField.classList.remove('hidden');
+                dom.fornecedorField.classList.add('hidden');
                 btnText.textContent = 'Registrar Venda e Adicionar Custo';
                 document.getElementById('order-id').required = true;
                 document.getElementById('feito-por').required = true;
-                document.getElementById('fornecedor').required = false; // Fornecedor pode ser opcional na venda
-            } else { // despesa
+                document.getElementById('fornecedor').required = false;
+            } else {
+                dom.feitoPorField.classList.add('hidden');
+                dom.fornecedorField.classList.remove('hidden');
                 btnText.textContent = 'Registrar Despesa';
                 document.getElementById('order-id').required = false;
-                document.getElementById('feito-por').required = false; // Feito por pode ser opcional na despesa
+                document.getElementById('feito-por').required = false;
                 document.getElementById('fornecedor').required = true;
             }
         }
@@ -550,8 +605,24 @@
             dom.themeToggleHandle.classList.toggle('translate-x-1', !isDark);
         }
 
+        function showToast(message, type = 'success') {
+            dom.toast.textContent = message;
+            dom.toast.className = 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white'; // Reset
+            if (type === 'success') {
+                dom.toast.classList.add('bg-green-500', 'text-white');
+            } else if (type === 'error') {
+                dom.toast.classList.add('bg-red-500', 'text-white');
+            }
+            dom.toast.classList.add('show');
+            setTimeout(() => {
+                dom.toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // --- LÓGICA DE DADOS E CÁLCULOS ---
+        
         function calculateMetrics(transactions) {
-            if (!transactions || transactions.length === 0) return { balance: 0, totalRevenue: 0, totalExpense: 0, peakDay: { date: 'N/A', amount: 0 }, peakMonth: { date: 'N/A', amount: 0 } };
+            if (!transactions || transactions.length === 0) return { balance: 0, totalRevenue: 0, totalExpense: 0, totalProfit: 0, profitMargin: 0, peakDay: { date: 'N/A', amount: 0 }, peakMonth: { date: 'N/A', amount: 0 } };
             let totalRevenue = 0, totalExpense = 0;
             const dailyRevenue = {}, monthlyRevenue = {};
             transactions.forEach(t => {
@@ -568,12 +639,14 @@
                 }
             });
             const findPeak = (data) => Object.entries(data).reduce((peak, [date, amount]) => amount > peak.amount ? { date, amount } : peak, { date: 'N/A', amount: 0 });
-            return { balance: totalRevenue - totalExpense, totalRevenue, totalExpense, peakDay: findPeak(dailyRevenue), peakMonth: findPeak(monthlyRevenue) };
+            const totalProfit = totalRevenue - totalExpense;
+            const profitMargin = totalRevenue > 0 ? (totalProfit / totalRevenue) * 100 : 0;
+            return { balance: totalProfit, totalRevenue, totalExpense, totalProfit, profitMargin, peakDay: findPeak(dailyRevenue), peakMonth: findPeak(monthlyRevenue) };
         }
         
         function getFilteredTransactions() {
-            const userTransactions = fullData.transactions[loggedInUser] || [];
-            const { searchQuery, startDate, endDate } = historyState;
+            const userTransactions = state.fullData.transactions[state.loggedInUser] || [];
+            const { searchQuery, startDate, endDate } = state.history;
             return userTransactions.filter(t => {
                 const searchMatch = !searchQuery || Object.values(t).some(val => String(val).toLowerCase().includes(searchQuery.toLowerCase()));
                 const date = t.dateTime ? t.dateTime.substring(0, 10) : '';
@@ -582,12 +655,29 @@
                 return searchMatch && startMatch && endMatch;
             });
         }
+        
+        function calculateInventory() {
+            const inventory = {};
+            const transactions = state.fullData.transactions[state.loggedInUser] || [];
+            transactions.forEach(t => {
+                if (!t.productName) return;
+                const productName = t.productName.toLowerCase().trim();
+                
+                if (t.type === 'despesa' && (t.category === 'custo-produto' || t.category === 'compra-estoque' || t.category === 'custo-geral')) {
+                    inventory[productName] = (inventory[productName] || 0) + t.quantity;
+                } else if (t.type === 'receita') {
+                    inventory[productName] = (inventory[productName] || 0) - t.quantity;
+                }
+            });
+            return Object.entries(inventory).sort((a,b) => a[0].localeCompare(b[0]));
+        }
 
+        // --- LÓGICA DOS GRÁFICOS ---
         function updateMainChart() {
             const chartType = dom.chartTypeSelect.value;
             const dataType = dom.chartDataSelect.value;
-            const userTransactions = fullData.transactions[loggedInUser] || [];
-            if (mainChart) mainChart.destroy();
+            const userTransactions = state.fullData.transactions[state.loggedInUser] || [];
+            if (state.mainChart) state.mainChart.destroy();
             const ctx = dom.mainChartCanvas.getContext('2d');
             let config;
             dom.chartDataSelect.disabled = false;
@@ -600,9 +690,8 @@
                     dom.chartDataSelect.disabled = true;
                     break;
             }
-            if(config) mainChart = new Chart(ctx, config);
+            if(config) state.mainChart = new Chart(ctx, config);
         }
-
         function getLineChartConfig(transactions, type) {
              const dataByType = transactions.filter(t => t.type === type && t.dateTime).sort((a,b) => new Date(a.dateTime) - new Date(b.dateTime));
             return {
@@ -627,23 +716,26 @@
             };
         }
 
+        // --- ATUALIZAÇÃO DA UI ---
         function updateAllUI() {
-            const allTransactions = fullData.transactions[loggedInUser] || [];
+            const allTransactions = state.fullData.transactions[state.loggedInUser] || [];
             const metrics = calculateMetrics(allTransactions);
             dom.balanceDisplay.textContent = `R$ ${metrics.balance.toFixed(2)}`;
-            dom.totalRevenueDisplay.textContent = `R$ ${metrics.totalRevenue.toFixed(2)}`;
-            dom.totalExpenseDisplay.textContent = `R$ ${metrics.totalExpense.toFixed(2)}`;
+            dom.totalProfitDisplay.textContent = `R$ ${metrics.totalProfit.toFixed(2)}`;
+            dom.profitMarginDisplay.textContent = `${metrics.profitMargin.toFixed(2)}%`;
             dom.peakDayDisplay.textContent = `${metrics.peakDay.date} (R$ ${metrics.peakDay.amount.toFixed(2)})`;
             dom.peakMonthDisplay.textContent = `${metrics.peakMonth.date} (R$ ${metrics.peakMonth.amount.toFixed(2)})`;
             updateMainChart();
             updateHistoryView();
+            updateInventoryView();
         }
         
         function showScreen(screenName) {
             dom.loadingScreen.classList.add('hidden');
             dom.authScreen.classList.add('hidden');
             dom.appContainer.classList.add('hidden');
-            if (screenName === 'auth') dom.authScreen.classList.remove('hidden');
+            if (screenName === 'loading') dom.loadingScreen.classList.remove('hidden');
+            else if (screenName === 'auth') dom.authScreen.classList.remove('hidden');
             else if (screenName === 'app') dom.appContainer.classList.remove('hidden');
         }
         
@@ -658,11 +750,23 @@
                 if (a.type === 'despesa' && b.type === 'receita') return 1;
                 return new Date(b.dateTime) - new Date(a.dateTime);
             });
-            const { currentPage, itemsPerPage } = historyState;
+            const { currentPage, itemsPerPage } = state.history;
             const totalPages = Math.ceil(sorted.length / itemsPerPage);
             const paginatedItems = sorted.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
             renderHistoryTable(paginatedItems);
             renderPaginationControls(sorted.length, totalPages);
+        }
+        
+        function updateInventoryView() {
+            const inventory = calculateInventory();
+            dom.inventoryTableBody.innerHTML = '';
+            dom.noInventoryMsg.classList.toggle('hidden', inventory.length > 0);
+            inventory.forEach(([productName, quantity]) => {
+                const el = document.createElement('tr');
+                el.className = 'bg-white dark:bg-gray-800 border-b dark:border-gray-700';
+                el.innerHTML = `<td class="p-3 capitalize">${productName}</td><td class="p-3 font-bold">${quantity}</td>`;
+                dom.inventoryTableBody.appendChild(el);
+            });
         }
 
         function renderHistoryTable(transactions) {
@@ -696,7 +800,7 @@
         function renderPaginationControls(totalItems, totalPages) {
             if (totalItems === 0) { dom.paginationControls.classList.add('hidden'); return; }
             dom.paginationControls.classList.remove('hidden');
-            const { currentPage, itemsPerPage } = historyState;
+            const { currentPage, itemsPerPage } = state.history;
             const startItem = (currentPage - 1) * itemsPerPage + 1;
             const endItem = Math.min(currentPage * itemsPerPage, totalItems);
             dom.pageInfo.textContent = `Mostrando ${startItem}-${endItem} de ${totalItems}`;
@@ -705,13 +809,126 @@
         }
         
         async function hashPassword(password) { const encoder = new TextEncoder(); const data = encoder.encode(password); const hashBuffer = await crypto.subtle.digest('SHA-256', data); const hashArray = Array.from(new Uint8Array(hashBuffer)); return hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); }
-        async function githubApiRequest(endpoint, options = {}) { const { user, repo, token } = githubConfig; const url = `https://api.github.com/repos/${user}/${repo}/contents/${endpoint}`; const headers = new Headers({ 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json', 'X-GitHub-Api-Version': '2022-11-28' }); const response = await fetch(url, { headers, ...options }); if (!response.ok) { const errorData = await response.json(); throw new Error(errorData.message || `Erro ${response.status}`); } return response.json(); }
-        async function loadDataFromGithub() { try { const data = await githubApiRequest(DATA_FILE_PATH); fullData = JSON.parse(atob(data.content)); fileSha = data.sha; } catch (error) { if (error.message.includes("Not Found")) { console.log('Arquivo de dados não encontrado.'); fullData = { users: [], transactions: {} }; fileSha = null; } else { dom.loadingMessage.innerHTML = `<p class="text-red-500 font-bold">Falha ao carregar dados!</p><p class="text-sm">${error.message}</p><p class="text-xs mt-2">Verifique seu token de acesso no código ou a conexão.</p>`; fileSha = 'failed'; throw error; } } }
-        async function saveDataToGithub() { try { const content = btoa(JSON.stringify(fullData, null, 2)); const body = { message: `Atualiza dados - ${new Date().toISOString()}`, content, sha: fileSha }; const data = await githubApiRequest(DATA_FILE_PATH, { method: 'PUT', body: JSON.stringify(body) }); fileSha = data.content.sha; return true; } catch (error) { alert(`Erro ao salvar no GitHub: ${error.message}`); return false; } }
-        function toggleAuthForms(showLogin) { dom.authError.textContent = ''; dom.loginForm.classList.toggle('hidden', !showLogin); dom.registerForm.classList.toggle('hidden', showLogin); dom.showLoginBtn.classList.toggle('text-indigo-600', showLogin); dom.showLoginBtn.classList.toggle('border-indigo-600', showLogin); dom.showRegisterBtn.classList.toggle('text-indigo-600', !showLogin); dom.showRegisterBtn.classList.toggle('border-indigo-600', !showLogin); }
-        async function handleLogin(e) { e.preventDefault(); dom.authError.textContent = ''; const email = dom.loginForm['login-email'].value; const password = dom.loginForm['login-password'].value; const passwordHash = await hashPassword(password); const user = fullData.users.find(u => u.email === email && u.passwordHash === passwordHash); if (user) { loggedInUser = user.email; sessionStorage.setItem('loggedInUser', loggedInUser); enterDashboard(); } else { dom.authError.textContent = 'Email ou senha inválidos.'; } }
-        async function handleRegister(e) { e.preventDefault(); dom.authError.textContent = ''; const email = dom.registerForm['register-email'].value; const password = dom.registerForm['register-password'].value; if (fullData.users.some(u => u.email === email)) { dom.authError.textContent = 'Este email já está cadastrado.'; return; } const passwordHash = await hashPassword(password); fullData.users.push({ email, passwordHash, displayName: '' }); if (!fullData.transactions[email]) fullData.transactions[email] = []; const success = await saveDataToGithub(); if (success) { loggedInUser = email; sessionStorage.setItem('loggedInUser', loggedInUser); enterDashboard(); } else { fullData.users.pop(); delete fullData.transactions[email]; } }
-        function handleLogout() { loggedInUser = null; sessionStorage.removeItem('loggedInUser'); showScreen('auth'); }
+        
+        // --- ABSTRAÇÃO DA API DO GITHUB ---
+        const GitHubService = {
+            async request(endpoint, options = {}) {
+                const { user, repo, token } = state.githubConfig;
+                if (!token) throw new Error('GitHub Token não configurado.');
+                const url = `https://api.github.com/repos/${user}/${repo}/contents/${endpoint}`;
+                const headers = new Headers({ 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json', 'X-GitHub-Api-Version': '2022-11-28' });
+                const response = await fetch(url, { headers, ...options });
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.message || `Erro ${response.status}`);
+                }
+                return response.json();
+            },
+            async getFile(path) {
+                try {
+                    const data = await this.request(path);
+                    return { content: JSON.parse(atob(data.content)), sha: data.sha };
+                } catch (error) {
+                    if (error.message.includes("Not Found")) {
+                        return { content: null, sha: null };
+                    }
+                    throw error;
+                }
+            },
+            async createFile(path, content, message) {
+                const contentEncoded = btoa(JSON.stringify(content, null, 2));
+                const body = { message, content: contentEncoded };
+                return this.request(path, { method: 'PUT', body: JSON.stringify(body) });
+            },
+            async updateFile(path, content, sha, message) {
+                const contentEncoded = btoa(JSON.stringify(content, null, 2));
+                 const body = { message, content: contentEncoded, sha };
+                return this.request(path, { method: 'PUT', body: JSON.stringify(body) });
+            }
+        };
+
+        // --- LÓGICA DE MANIPULAÇÃO DE DADOS ---
+         async function loadDataFromGithub() {
+            try {
+                const data = await GitHubService.getFile('data.json');
+                if (data.content) {
+                    state.fullData = data.content;
+                    state.fileSha = data.sha;
+                } else {
+                    state.fullData = { users: [], transactions: {} };
+                    state.fileSha = null;
+                }
+            } catch (error) {
+                dom.loadingMessage.innerHTML = `<p class="text-red-500 font-bold">Falha ao carregar dados!</p><p class="text-sm">${error.message}</p><p class="text-xs mt-2">Verifique seu token de acesso no código ou a conexão.</p>`;
+                throw error;
+            }
+        }
+
+        async function saveData() {
+            try {
+                const data = await GitHubService.updateFile('data.json', state.fullData, state.fileSha, `Atualiza dados - ${new Date().toISOString()}`);
+                state.fileSha = data.content.sha;
+                return true;
+            } catch (error) {
+                showToast(`Erro ao salvar no GitHub: ${error.message}`, 'error');
+                return false;
+            }
+        }
+        
+        // --- HANDLERS DE EVENTOS ---
+        function toggleAuthForms(showLogin) { 
+            dom.authError.textContent = ''; 
+            dom.loginForm.classList.toggle('hidden', !showLogin); 
+            dom.registerForm.classList.toggle('hidden', showLogin); 
+            dom.showLoginBtn.classList.toggle('text-indigo-600', showLogin); 
+            dom.showLoginBtn.classList.toggle('border-indigo-600', showLogin); 
+            dom.showRegisterBtn.classList.toggle('text-indigo-600', !showLogin); 
+            dom.showRegisterBtn.classList.toggle('border-indigo-600', !showLogin); 
+        }
+
+        async function handleLogin(e) {
+            e.preventDefault(); 
+            dom.authError.textContent = ''; 
+            const email = dom.loginForm['login-email'].value; 
+            const password = dom.loginForm['login-password'].value; 
+            const passwordHash = await hashPassword(password); 
+            const user = state.fullData.users.find(u => u.email === email && u.passwordHash === passwordHash); 
+            if (user) { 
+                state.loggedInUser = user.email; 
+                sessionStorage.setItem('loggedInUser', state.loggedInUser); 
+                enterDashboard(); 
+            } else { 
+                dom.authError.textContent = 'Email ou senha inválidos.'; 
+            }
+        }
+
+        async function handleRegister(e) { 
+            e.preventDefault(); 
+            dom.authError.textContent = ''; 
+            const email = dom.registerForm['register-email'].value; 
+            const password = dom.registerForm['register-password'].value; 
+            if (state.fullData.users.some(u => u.email === email)) { 
+                dom.authError.textContent = 'Este email já está cadastrado.'; 
+                return; 
+            } 
+            const passwordHash = await hashPassword(password); 
+            state.fullData.users.push({ email, passwordHash, displayName: '' }); 
+            if (!state.fullData.transactions[email]) state.fullData.transactions[email] = []; 
+            const success = await saveData(); 
+            if (success) { 
+                state.loggedInUser = email; 
+                sessionStorage.setItem('loggedInUser', state.loggedInUser); 
+                enterDashboard(); 
+            } else { 
+                state.fullData.users.pop(); 
+                delete state.fullData.transactions[email]; 
+            } 
+        }
+        function handleLogout() { 
+            state.loggedInUser = null; 
+            sessionStorage.removeItem('loggedInUser'); 
+            showScreen('auth'); 
+        }
         
         async function handleTransactionSubmit(e) {
             e.preventDefault();
@@ -725,16 +942,16 @@
             const btnText = btn.querySelector('.btn-text');
             const btnSpinner = btn.querySelector('.btn-spinner');
             const orderId = dom.transactionForm['order-id'].value;
-            const userTransactions = fullData.transactions[loggedInUser] || [];
+            const userTransactions = state.fullData.transactions[state.loggedInUser] || [];
             if (userTransactions.some(t => t.orderId === orderId && t.type === 'receita')) {
                 alert('ID já existente para este tipo de transação.');
                 return;
             }
             btn.disabled = true; btnText.classList.add('hidden'); btnSpinner.classList.remove('hidden');
             const revenueTransaction = { id: crypto.randomUUID(), orderId, productName: dom.transactionForm['product-name'].value, quantity: parseInt(dom.transactionForm['quantity'].value), amount: parseFloat(dom.transactionForm['amount'].value), feitoPor: dom.transactionForm['feito-por'].value, fornecedor: '', dateTime: new Date().toISOString(), type: 'receita', category: 'venda-produto' };
-            if (!fullData.transactions[loggedInUser]) fullData.transactions[loggedInUser] = [];
-            fullData.transactions[loggedInUser].push(revenueTransaction);
-            if (await saveDataToGithub()) { dom.transactionForm.reset(); toggleTransactionFields(); pendingRevenueTransaction = revenueTransaction; showExpenseModal(); } else { fullData.transactions[loggedInUser].pop(); }
+            if (!state.fullData.transactions[state.loggedInUser]) state.fullData.transactions[state.loggedInUser] = [];
+            state.fullData.transactions[state.loggedInUser].push(revenueTransaction);
+            if (await saveData()) { dom.transactionForm.reset(); toggleTransactionFields(); state.pendingRevenueTransaction = revenueTransaction; showExpenseModal(); } else { state.fullData.transactions[state.loggedInUser].pop(); }
             btn.disabled = false; btnText.classList.remove('hidden'); btnSpinner.classList.add('hidden');
         }
 
@@ -744,23 +961,23 @@
             const btnSpinner = btn.querySelector('.btn-spinner');
             const orderId = dom.transactionForm['order-id'].value;
             if (orderId) {
-                const userTransactions = fullData.transactions[loggedInUser] || [];
+                const userTransactions = state.fullData.transactions[state.loggedInUser] || [];
                 if (userTransactions.some(t => t.orderId === orderId && t.type === 'despesa')) {
                     alert('ID já existente para este tipo de transação.');
                     return;
                 }
             }
             btn.disabled = true; btnText.classList.add('hidden'); btnSpinner.classList.remove('hidden');
-            const expenseTransaction = { id: crypto.randomUUID(), orderId: orderId || 'N/A', productName: dom.transactionForm['product-name'].value, quantity: parseInt(dom.transactionForm['quantity'].value), amount: parseFloat(dom.transactionForm['amount'].value), feitoPor: loggedInUser, fornecedor: dom.transactionForm['fornecedor'].value, dateTime: new Date().toISOString(), type: 'despesa', category: 'custo-geral' };
-            if (!fullData.transactions[loggedInUser]) fullData.transactions[loggedInUser] = [];
-            fullData.transactions[loggedInUser].push(expenseTransaction);
-            if(await saveDataToGithub()) { alert('Despesa registrada com sucesso!'); dom.transactionForm.reset(); toggleTransactionFields(); updateAllUI(); } else { fullData.transactions[loggedInUser].pop(); }
+            const expenseTransaction = { id: crypto.randomUUID(), orderId: orderId || 'N/A', productName: dom.transactionForm['product-name'].value, quantity: parseInt(dom.transactionForm['quantity'].value), amount: parseFloat(dom.transactionForm['amount'].value), feitoPor: '', fornecedor: dom.transactionForm['fornecedor'].value, dateTime: new Date().toISOString(), type: 'despesa', category: 'custo-geral' };
+            if (!state.fullData.transactions[state.loggedInUser]) state.fullData.transactions[state.loggedInUser] = [];
+            state.fullData.transactions[state.loggedInUser].push(expenseTransaction);
+            if(await saveData()) { alert('Despesa registrada com sucesso!'); dom.transactionForm.reset(); toggleTransactionFields(); updateAllUI(); } else { state.fullData.transactions[state.loggedInUser].pop(); }
             btn.disabled = false; btnText.classList.remove('hidden'); btnSpinner.classList.add('hidden');
         }
 
         function showExpenseModal() {
-            dom.modalOrderId.textContent = pendingRevenueTransaction.orderId;
-            dom.modalProductName.textContent = pendingRevenueTransaction.productName;
+            dom.modalOrderId.textContent = state.pendingRevenueTransaction.orderId;
+            dom.modalProductName.textContent = state.pendingRevenueTransaction.productName;
             dom.expenseModal.classList.remove('hidden');
             document.getElementById('expense-amount').focus();
         }
@@ -771,24 +988,24 @@
             const fornecedor = document.getElementById('modal-fornecedor').value;
             if (isNaN(expenseAmount) || expenseAmount <= 0) { alert('Por favor, insira um valor de custo válido.'); return; }
             if (!fornecedor) { alert('Por favor, insira o nome do fornecedor.'); return; }
-            const userTransactions = fullData.transactions[loggedInUser] || [];
-             if (userTransactions.some(t => t.orderId === pendingRevenueTransaction.orderId && t.type === 'despesa')) {
+            const userTransactions = state.fullData.transactions[state.loggedInUser] || [];
+             if (userTransactions.some(t => t.orderId === state.pendingRevenueTransaction.orderId && t.type === 'despesa')) {
                 alert('ID já existente para este tipo de transação.');
                 dom.expenseModal.classList.add('hidden');
                 dom.expenseModalForm.reset();
-                pendingRevenueTransaction = null;
+                state.pendingRevenueTransaction = null;
                 return;
             }
-            const expenseTransaction = { ...pendingRevenueTransaction, id: crypto.randomUUID(), amount: expenseAmount, feitoPor: loggedInUser, fornecedor: fornecedor, dateTime: new Date().toISOString(), type: 'despesa', category: 'custo-produto' };
-            fullData.transactions[loggedInUser].push(expenseTransaction);
-            if(await saveDataToGithub()) { alert('Venda e custo registrados com sucesso!'); updateAllUI(); } else { fullData.transactions[loggedInUser].pop(); }
+            const expenseTransaction = { ...state.pendingRevenueTransaction, id: crypto.randomUUID(), amount: expenseAmount, feitoPor: '', fornecedor: fornecedor, dateTime: new Date().toISOString(), type: 'despesa', category: 'custo-produto' };
+            state.fullData.transactions[state.loggedInUser].push(expenseTransaction);
+            if(await saveData()) { alert('Venda e custo registrados com sucesso!'); updateAllUI(); } else { state.fullData.transactions[state.loggedInUser].pop(); }
             dom.expenseModal.classList.add('hidden');
             dom.expenseModalForm.reset();
-            pendingRevenueTransaction = null;
+            state.pendingRevenueTransaction = null;
         }
 
         function showEditModal(transactionId) {
-            const transaction = fullData.transactions[loggedInUser].find(t => t.id === transactionId);
+            const transaction = state.fullData.transactions[state.loggedInUser].find(t => t.id === transactionId);
             if (!transaction) return;
             const form = dom.editModalForm;
             form['edit-id'].value = transaction.id;
@@ -805,46 +1022,31 @@
             e.preventDefault();
             const form = dom.editModalForm;
             const transactionId = form['edit-id'].value;
-            const transactionIndex = fullData.transactions[loggedInUser].findIndex(t => t.id === transactionId);
+            const transactionIndex = state.fullData.transactions[state.loggedInUser].findIndex(t => t.id === transactionId);
             if (transactionIndex === -1) return;
-            const originalTransaction = { ...fullData.transactions[loggedInUser][transactionIndex] };
+            const originalTransaction = { ...state.fullData.transactions[state.loggedInUser][transactionIndex] };
             const updatedTransaction = { ...originalTransaction, orderId: form['edit-order-id'].value, productName: form['edit-product-name'].value, quantity: parseInt(form['edit-quantity'].value), amount: parseFloat(form['edit-amount'].value), feitoPor: form['edit-feito-por'].value, fornecedor: form['edit-fornecedor'].value, };
-            fullData.transactions[loggedInUser][transactionIndex] = updatedTransaction;
-            if (await saveDataToGithub()) { alert('Transação atualizada!'); dom.editModal.classList.add('hidden'); updateAllUI(); } else { fullData.transactions[loggedInUser][transactionIndex] = originalTransaction; alert('Falha ao atualizar.'); }
+            state.fullData.transactions[state.loggedInUser][transactionIndex] = updatedTransaction;
+            if (await saveData()) { alert('Transação atualizada!'); dom.editModal.classList.add('hidden'); updateAllUI(); } else { state.fullData.transactions[state.loggedInUser][transactionIndex] = originalTransaction; alert('Falha ao atualizar.'); }
         }
 
         async function handleDeleteTransaction(transactionId) {
-            // 1. Confirmação do Usuário
-            if (!confirm('Tem certeza que deseja excluir esta transação? Esta ação não pode ser desfeita.')) {
-                return; // Interrompe se o usuário cancelar
-            }
-    
-            const userTransactions = fullData.transactions[loggedInUser] || [];
+            if (!confirm('Tem certeza que deseja excluir esta transação? Esta ação não pode ser desfeita.')) return;
+            const originalTransactions = [...state.fullData.transactions[state.loggedInUser]];
+            const updatedTransactions = originalTransactions.filter(t => t.id !== transactionId);
             
-            // Verifica se a transação existe antes de prosseguir
-            const transactionExists = userTransactions.some(t => t.id === transactionId);
-            if (!transactionExists) {
-                alert('Erro: Transação não encontrada para excluir.');
+            if (updatedTransactions.length === originalTransactions.length) {
+                showToast('Erro: Transação não encontrada.', 'error');
                 return;
             }
             
-            // 2. Backup do Estado Atual
-            const originalTransactions = [...userTransactions];
-    
-            // 3. Criação do Novo Estado (sem a transação excluída)
-            const updatedTransactions = userTransactions.filter(t => t.id !== transactionId);
-    
-            // 4. Atualização Otimista do Estado Global
-            fullData.transactions[loggedInUser] = updatedTransactions;
-    
-            // 5. Tentativa de Sincronização com o "Banco de Dados" (GitHub)
-            if (await saveDataToGithub()) {
-                alert('Transação excluída com sucesso.');
+            state.fullData.transactions[state.loggedInUser] = updatedTransactions;
+            if (await saveData()) {
+                showToast('Transação excluída com sucesso.', 'success');
                 updateAllUI();
             } else {
-                // 6. Reversão (Rollback) em Caso de Falha
-                alert('Falha ao excluir a transação. Seus dados não foram alterados.');
-                fullData.transactions[loggedInUser] = originalTransactions;
+                state.fullData.transactions[state.loggedInUser] = originalTransactions; // Rollback
+                showToast('Falha ao excluir a transação.', 'error');
             }
         }
         
@@ -855,19 +1057,19 @@
             if (!newName.trim()) { alert("O nome não pode estar em branco."); return; }
             if (!confirm(`Tem certeza que deseja alterar seu nome de exibição para "${newName}"? Seu email de login permanecerá o mesmo.`)) return;
             
-            const userIndex = fullData.users.findIndex(u => u.email === loggedInUser);
+            const userIndex = state.fullData.users.findIndex(u => u.email === state.loggedInUser);
             if (userIndex === -1) { alert("Usuário não encontrado."); return; }
             const passwordHash = await hashPassword(password);
-            if (fullData.users[userIndex].passwordHash !== passwordHash) { alert("Senha atual incorreta."); return; }
+            if (state.fullData.users[userIndex].passwordHash !== passwordHash) { alert("Senha atual incorreta."); return; }
             
-            const oldName = fullData.users[userIndex].displayName;
-            fullData.users[userIndex].displayName = newName;
-            if (await saveDataToGithub()) {
+            const oldName = state.fullData.users[userIndex].displayName;
+            state.fullData.users[userIndex].displayName = newName;
+            if (await saveData()) {
                 dom.userEmailSidebar.textContent = newName;
                 alert("Nome de exibição atualizado!");
                 dom.changeDisplayNameForm.reset();
             } else {
-                fullData.users[userIndex].displayName = oldName;
+                state.fullData.users[userIndex].displayName = oldName;
             }
         }
 
@@ -875,22 +1077,23 @@
             e.preventDefault();
             const currentPassword = dom.changePasswordForm['current-password'].value;
             const newPassword = dom.changePasswordForm['new-password'].value;
-            const userIndex = fullData.users.findIndex(u => u.email === loggedInUser);
+            const userIndex = state.fullData.users.findIndex(u => u.email === state.loggedInUser);
             if (userIndex === -1) { alert("Usuário não encontrado."); return; }
             const currentPasswordHash = await hashPassword(currentPassword);
-            if (fullData.users[userIndex].passwordHash !== currentPasswordHash) { alert("Senha atual incorreta."); return; }
+            if (state.fullData.users[userIndex].passwordHash !== currentPasswordHash) { alert("Senha atual incorreta."); return; }
             const newPasswordHash = await hashPassword(newPassword);
-            const oldPasswordHash = fullData.users[userIndex].passwordHash;
-            fullData.users[userIndex].passwordHash = newPasswordHash;
-            if (await saveDataToGithub()) {
+            const oldPasswordHash = state.fullData.users[userIndex].passwordHash;
+            state.fullData.users[userIndex].passwordHash = newPasswordHash;
+            if (await saveData()) {
                 alert("Senha atualizada com sucesso!");
                 dom.changePasswordForm.reset();
             } else {
-                fullData.users[userIndex].passwordHash = oldPasswordHash;
+                state.fullData.users[userIndex].passwordHash = oldPasswordHash;
             }
         }
         
-        init();
+        document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
 </html>
+
