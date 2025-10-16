@@ -151,6 +151,18 @@
         "dateTime": "2025-10-16T12:53:19.397Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "68ee5086-6e13-46ec-9c57-04eeab31fecb",
+        "orderId": "702-8729906-8581811",
+        "productName": "testando 11111",
+        "quantity": 1,
+        "amount": 20,
+        "feitoPor": "",
+        "fornecedor": "amazon sapoha",
+        "dateTime": "2025-10-16T12:53:27.829Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
