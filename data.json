@@ -139,6 +139,18 @@
         "dateTime": "2025-10-15T19:44:29.860Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "d58e655c-de9e-46a1-b951-2ed696fe8d0f",
+        "orderId": "702-8729906-8581811",
+        "productName": "testando 11111",
+        "quantity": 1,
+        "amount": 43,
+        "feitoPor": "alek",
+        "fornecedor": "",
+        "dateTime": "2025-10-16T12:53:19.397Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
