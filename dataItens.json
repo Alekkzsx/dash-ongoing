@@ -5,7 +5,14 @@
       "name": "baggio",
       "quantity": 10,
       "price": 34.9,
-      "suppliers": []
+      "suppliers": [
+        {
+          "id": "c22cfa59-5fee-4999-a92d-4f6144e6f790",
+          "url": "https://shopee.com.br/Baggio-Caf%C3%A9-Espresso-Gr%C3%A3o-500g-i.1321479779.23193718389?sp_atk=d1e563ef-b1fa-426d-8ed4-c6c4de032432&xptdk=d1e563ef-b1fa-426d-8ed4-c6c4de032432",
+          "xpath": "#sll2-normal-pdp-main > div > div > div > div.container > section > section.flex.flex-auto.YTDXQ0 > div > div:nth-child(3) > div > section > div > div.IZPeQz.B67UQ0",
+          "currentPrice": null
+        }
+      ]
     }
   ]
 }
