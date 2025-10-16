@@ -93,18 +93,6 @@
         "category": "custo-produto"
       },
       {
-        "id": "d3d72923-defe-4cc4-bf0e-d80a2f00d3db",
-        "orderId": "702-8729906-8581822",
-        "productName": "teste",
-        "quantity": 1,
-        "amount": 22,
-        "feitoPor": "alek",
-        "fornecedor": "",
-        "dateTime": "2025-10-15T19:44:21.885Z",
-        "type": "receita",
-        "category": "venda-produto"
-      },
-      {
         "id": "0adf60b7-d75d-466d-a07e-51ed8e139d5e",
         "orderId": "702-8729906-8581822",
         "productName": "teste",
