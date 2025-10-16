@@ -11,6 +11,12 @@
           "url": "https://shopee.com.br/Baggio-Caf%C3%A9-Espresso-Gr%C3%A3o-500g-i.1321479779.23193718389?sp_atk=d1e563ef-b1fa-426d-8ed4-c6c4de032432&xptdk=d1e563ef-b1fa-426d-8ed4-c6c4de032432",
           "xpath": "/html/body/div[1]/div/div[2]/div/div/div[1]/div/div/div/div[2]/section/section[2]/div/div[3]/div/section/div/div[1]",
           "currentPrice": 22.35
+        },
+        {
+          "id": "dae8f33b-6cc8-4789-8e76-cff72477f02c",
+          "url": "https://shopee.com.br/Baggio-Caf%C3%A9-Espresso-Gr%C3%A3o-500g-i.1321479779.23193718389?sp_atk=d1e563ef-b1fa-426d-8ed4-c6c4de032432&xptdk=d1e563ef-b1fa-426d-8ed4-c6c4de032432",
+          "xpath": "document.querySelector(\"#sll2-normal-pdp-main > div > div > div > div.container > section > section.flex.flex-auto.YTDXQ0 > div > div:nth-child(3) > div > section > div > div.IZPeQz.B67UQ0\")",
+          "currentPrice": null
         }
       ]
     }
