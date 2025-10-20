@@ -8069,7 +8069,7 @@
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-10-02T00:00:00.000Z",
-        "type": "despesa",
+        "type": "receita",
         "category": "custo-produto"
       },
       {
