@@ -1405,7 +1405,7 @@
         "orderId": "702-0084743-6362651",
         "productName": "Baggio Café Café Torrado E Moído Aroma De Chocolate Trufado 250G",
         "quantity": 1,
-        "amount": null,
+        "amount": 0,
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-07-02T00:00:00.000Z",
