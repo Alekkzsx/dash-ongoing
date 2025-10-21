@@ -457,7 +457,7 @@
         "orderId": "701-0684399-8981832",
         "productName": "Heinz Ketchup Tradicional, 1,033KG - Tamanho Grande",
         "quantity": 1,
-        "amount": 27.0,
+        "amount": 27,
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-06-16T00:00:00.000Z",
@@ -661,7 +661,7 @@
         "orderId": "701-7147499-0345855",
         "productName": "Personal Papel Higiênico Vip Folha Tripla Com 12 Rolos De 20M",
         "quantity": 1,
-        "amount": 37.0,
+        "amount": 37,
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "",
@@ -1657,7 +1657,7 @@
         "orderId": "702-2175753-1916236",
         "productName": "Viva Verde Areia Higiênica Biodegradável para Gatos Grãos Finos 4kg",
         "quantity": 1,
-        "amount": 54.0,
+        "amount": 54,
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-07-06T00:00:00.000Z",
@@ -4365,18 +4365,6 @@
         "category": "venda-produto"
       },
       {
-        "id": "384cd658-bebd-45b5-aa8e-970bd76a4e8f",
-        "orderId": "701-6848360-3238648",
-        "productName": "Viva Verde Areia Higiênica Biodegradável para Gatos Grãos Finos 4kg",
-        "quantity": 1,
-        "amount": 56.0,
-        "feitoPor": "",
-        "fornecedor": "",
-        "dateTime": "2025-07-16T00:00:00.000Z",
-        "type": "despesa",
-        "category": "custo-produto"
-      },
-      {
         "id": "e9dd0788-9ebc-4ee6-ac2b-0605c66c7fb9",
         "orderId": "702-2558900-2941049",
         "productName": "Comfort Amaciante Concentrado Puro Cuidado 1,5L",
@@ -4389,18 +4377,6 @@
         "category": "venda-produto"
       },
       {
-        "id": "091bc360-cf46-42ef-831c-f677addd1a35",
-        "orderId": "702-2558900-2941049",
-        "productName": "Comfort Amaciante Concentrado Puro Cuidado 1,5L",
-        "quantity": 1,
-        "amount": 56.53,
-        "feitoPor": "",
-        "fornecedor": "",
-        "dateTime": "2025-07-16T00:00:00.000Z",
-        "type": "despesa",
-        "category": "custo-produto"
-      },
-      {
         "id": "9ead7f8a-5f33-4977-8b1c-5902e1c5582f",
         "orderId": "702-1964924-5762655",
         "productName": "Cereal Sucrilhos® Original Kellogg's® 1kg",
@@ -4411,6 +4387,30 @@
         "dateTime": "2025-07-15T00:00:00.000Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "384cd658-bebd-45b5-aa8e-970bd76a4e8f",
+        "orderId": "701-6848360-3238648",
+        "productName": "Viva Verde Areia Higiênica Biodegradável para Gatos Grãos Finos 4kg",
+        "quantity": 1,
+        "amount": 56,
+        "feitoPor": "",
+        "fornecedor": "",
+        "dateTime": "2025-07-16T00:00:00.000Z",
+        "type": "despesa",
+        "category": "custo-produto"
+      },
+      {
+        "id": "091bc360-cf46-42ef-831c-f677addd1a35",
+        "orderId": "702-2558900-2941049",
+        "productName": "Comfort Amaciante Concentrado Puro Cuidado 1,5L",
+        "quantity": 1,
+        "amount": 56.53,
+        "feitoPor": "",
+        "fornecedor": "",
+        "dateTime": "2025-07-16T00:00:00.000Z",
+        "type": "despesa",
+        "category": "custo-produto"
       },
       {
         "id": "c18ebaa6-077a-4d25-b6ac-fdb5b50e89b6",
@@ -5961,30 +5961,6 @@
         "category": "custo-produto"
       },
       {
-        "id": "5026eb57-1a25-4ec7-a968-3b36a5f04031",
-        "orderId": "701-2755233-4004207",
-        "productName": "Cereal Sucrilhos® Original Kellogg's® 1kg",
-        "quantity": 1,
-        "amount": 66.39,
-        "feitoPor": "",
-        "fornecedor": "",
-        "dateTime": "2025-09-08T00:00:00.000Z",
-        "type": "receita",
-        "category": "venda-produto"
-      },
-      {
-        "id": "05f5b11c-a1c1-4fed-917a-b7f47e1306d4",
-        "orderId": "701-2755233-4004207",
-        "productName": "Cereal Sucrilhos® Original Kellogg's® 1kg",
-        "quantity": 1,
-        "amount": 34.29,
-        "feitoPor": "",
-        "fornecedor": "",
-        "dateTime": "2025-09-08T00:00:00.000Z",
-        "type": "despesa",
-        "category": "custo-produto"
-      },
-      {
         "id": "4520df0c-355f-45ab-82aa-fcc5d51f9094",
         "orderId": "701-8789275-7569833",
         "productName": "Hemmer Ketchup Tradicional Bisnaga 1KG",
@@ -6053,6 +6029,30 @@
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-09-06T00:00:00.000Z",
+        "type": "despesa",
+        "category": "custo-produto"
+      },
+      {
+        "id": "5026eb57-1a25-4ec7-a968-3b36a5f04031",
+        "orderId": "701-2755233-4004207",
+        "productName": "Cereal Sucrilhos® Original Kellogg's® 1kg",
+        "quantity": 1,
+        "amount": 66.39,
+        "feitoPor": "",
+        "fornecedor": "",
+        "dateTime": "2025-09-08T00:00:00.000Z",
+        "type": "receita",
+        "category": "venda-produto"
+      },
+      {
+        "id": "05f5b11c-a1c1-4fed-917a-b7f47e1306d4",
+        "orderId": "701-2755233-4004207",
+        "productName": "Cereal Sucrilhos® Original Kellogg's® 1kg",
+        "quantity": 1,
+        "amount": 34.29,
+        "feitoPor": "",
+        "fornecedor": "",
+        "dateTime": "2025-09-08T00:00:00.000Z",
         "type": "despesa",
         "category": "custo-produto"
       },
@@ -6337,7 +6337,7 @@
         "orderId": "702-6564686-6902632",
         "productName": "3 Corações Café Torrado e Moído Extra Forte, 500g vácuo",
         "quantity": 1,
-        "amount": 50.0,
+        "amount": 50,
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-09-09T00:00:00.000Z",
@@ -6769,7 +6769,7 @@
         "orderId": "702-8700826-0588228",
         "productName": "MANTECORP - Hidratante Facial Epidrat Calm - Restaurador e Calmante para Peles Sensíveis, Promove Conforto Imediato, Minimiza Descamação - 40g",
         "quantity": 1,
-        "amount": 70.0,
+        "amount": 70,
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-09-10T00:00:00.000Z",
@@ -7789,7 +7789,7 @@
         "orderId": "702-3288317-3807418",
         "productName": "Ketchup Heinz Tradicional 1,033KG",
         "quantity": 1,
-        "amount": 94.0,
+        "amount": 94,
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-09-30T00:00:00.000Z",
@@ -7813,7 +7813,7 @@
         "orderId": "702-9358214-9948203",
         "productName": "Densidade Acidificante Capilar 250g, Lola Cosmetics",
         "quantity": 1,
-        "amount": 57.0,
+        "amount": 57,
         "feitoPor": "",
         "fornecedor": "",
         "dateTime": "2025-10-01T00:00:00.000Z",
@@ -8541,18 +8541,6 @@
         "category": "venda-produto"
       },
       {
-        "id": "5e0bdba8-5a13-48ce-80b1-f9f663879f8b",
-        "orderId": "701-3781461-2654644",
-        "productName": "Baggio Café Bourbon Espresso Grão 500g",
-        "quantity": 1,
-        "amount": 77.8,
-        "feitoPor": "",
-        "fornecedor": "",
-        "dateTime": "2025-10-13T00:00:00.000Z",
-        "type": "despesa",
-        "category": "custo-produto"
-      },
-      {
         "id": "72cf3105-ad69-4c09-a352-95cc1f8e41b6",
         "orderId": "701-9370787-4564253",
         "productName": "Baggio Café Bourbon Espresso Grão 500g",
@@ -8563,6 +8551,18 @@
         "dateTime": "2025-10-12T00:00:00.000Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "5e0bdba8-5a13-48ce-80b1-f9f663879f8b",
+        "orderId": "701-3781461-2654644",
+        "productName": "Baggio Café Bourbon Espresso Grão 500g",
+        "quantity": 1,
+        "amount": 77.8,
+        "feitoPor": "",
+        "fornecedor": "",
+        "dateTime": "2025-10-13T00:00:00.000Z",
+        "type": "despesa",
+        "category": "custo-produto"
       },
       {
         "id": "b7b26c9b-537f-40b8-a89a-7f2ee5fec07d",
@@ -8935,6 +8935,18 @@
         "dateTime": "2025-10-20T00:00:00.000Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "e8b46aec-f40e-49dd-99fd-b16ee55a41e8",
+        "orderId": "701-4094653-6323452",
+        "productName": "Cereal Sucrilhos� Original Kellogg's� 1kg",
+        "quantity": 1,
+        "amount": 60.22,
+        "feitoPor": "alex",
+        "fornecedor": "",
+        "dateTime": "2025-10-21T14:17:55.467Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
