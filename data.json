@@ -9079,18 +9079,6 @@
         "dateTime": "2025-10-21T16:47:24.083Z",
         "type": "despesa",
         "category": "custo-produto"
-      },
-      {
-        "id": "755c62eb-f0c9-4944-b65d-c15fe005be6c",
-        "orderId": "702-1205708-4571446",
-        "productName": "testes",
-        "quantity": 1,
-        "amount": 23040,
-        "feitoPor": "alex",
-        "fornecedor": "",
-        "dateTime": "2025-10-22T13:18:25.408Z",
-        "type": "receita",
-        "category": "venda-produto"
       }
     ]
   }
