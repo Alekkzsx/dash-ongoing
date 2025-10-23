@@ -9235,6 +9235,18 @@
         "dateTime": "2025-10-23T17:39:53.626Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "53ffce6a-bebf-4d6b-881a-3b7f5f86d2fc",
+        "orderId": "702-6984405-6329033",
+        "productName": "Mor - Cadeira Alta Aço Sortido",
+        "quantity": 1,
+        "amount": 74.06,
+        "feitoPor": "",
+        "fornecedor": "shopee",
+        "dateTime": "2025-10-23T18:02:11.762Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
