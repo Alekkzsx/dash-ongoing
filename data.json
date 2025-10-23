@@ -9223,6 +9223,18 @@
         "dateTime": "2025-10-23T17:36:27.754Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "67b7bb39-3b96-48bf-8171-1d79ceaf6c4a",
+        "orderId": "702-6984405-6329033",
+        "productName": "Mor - Cadeira Alta Aço Sortido",
+        "quantity": 1,
+        "amount": 85.03,
+        "feitoPor": "alex",
+        "fornecedor": "",
+        "dateTime": "2025-10-23T17:39:53.626Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
