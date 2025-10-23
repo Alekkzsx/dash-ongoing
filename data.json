@@ -9211,6 +9211,18 @@
         "dateTime": "2025-10-23T17:34:37.417Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "056abf0b-80b2-44ed-b1f2-2f192d42a564",
+        "orderId": "701-3251521-7429821",
+        "productName": "Baggio Café Bourbon Espresso Grão 500g",
+        "quantity": 1,
+        "amount": 75.72,
+        "feitoPor": "",
+        "fornecedor": "shopee",
+        "dateTime": "2025-10-23T17:36:27.754Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
