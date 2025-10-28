@@ -9295,6 +9295,18 @@
         "dateTime": "2025-10-25T01:06:01.614Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "22b1a703-1a1c-4aa0-9fa2-94e228da5ccc",
+        "orderId": "702-6194115-5206616",
+        "productName": "Cereal Sucrilhos® Original Kellogg's® 1kg",
+        "quantity": 1,
+        "amount": 43.94,
+        "feitoPor": "Gabriel Aliotto",
+        "fornecedor": "",
+        "dateTime": "2025-10-28T18:12:41.787Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
