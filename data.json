@@ -9331,6 +9331,18 @@
         "dateTime": "2025-10-29T20:30:25.227Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "a0d4e20a-68bd-4bbd-902f-2c468b758652",
+        "orderId": "701-8588663-7945862",
+        "productName": "Cereal Sucrilhos® Original Kellogg's® 1kg",
+        "quantity": 1,
+        "amount": 40.09,
+        "feitoPor": "",
+        "fornecedor": "Shopee - Kellanova",
+        "dateTime": "2025-10-29T20:30:46.463Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
