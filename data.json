@@ -9403,6 +9403,18 @@
         "dateTime": "2025-11-03T14:57:06.814Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "fcbce173-63a4-4067-af1f-acf5be7cb9f4",
+        "orderId": "702-7937448-1013030",
+        "productName": "Hemmer Ketchup Tradicional Bisnaga 1KG",
+        "quantity": 1,
+        "amount": 27.77,
+        "feitoPor": "",
+        "fornecedor": "Shopee - SOLIMA empresa e comércio",
+        "dateTime": "2025-11-03T15:00:00.181Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
