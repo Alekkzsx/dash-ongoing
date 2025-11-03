@@ -9391,6 +9391,18 @@
         "dateTime": "2025-11-03T14:54:04.943Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "177884c3-e891-47e2-9a7b-ac38c2005522",
+        "orderId": "702-7937448-1013030",
+        "productName": "Hemmer Ketchup Tradicional Bisnaga 1KG",
+        "quantity": 1,
+        "amount": 60.57,
+        "feitoPor": "marco antonio da silva santos",
+        "fornecedor": "",
+        "dateTime": "2025-11-03T14:57:06.814Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
