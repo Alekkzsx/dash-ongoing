@@ -9439,6 +9439,18 @@
         "dateTime": "2025-11-06T13:44:05.235Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "6aca2f81-b7a7-48e6-9886-37f6dae53929",
+        "orderId": "701-2133171-9430624",
+        "productName": "Personal Papel Higiênico Vip Folha Dupla, 16 Unidades Branco (Embalagem Pode Variar)",
+        "quantity": 1,
+        "amount": 49.46,
+        "feitoPor": "Wivienn Albuquerque",
+        "fornecedor": "",
+        "dateTime": "2025-11-07T12:04:00.121Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
