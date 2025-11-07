@@ -9451,6 +9451,18 @@
         "dateTime": "2025-11-07T12:04:00.121Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "64b555ba-1402-47b6-aa01-2a07ea43b936",
+        "orderId": "701-2133171-9430624",
+        "productName": "Personal Papel Higiênico Vip Folha Dupla, 16 Unidades Branco (Embalagem Pode Variar)",
+        "quantity": 1,
+        "amount": 42.23,
+        "feitoPor": "",
+        "fornecedor": "Shopee - Norton Distribuidora",
+        "dateTime": "2025-11-07T12:10:09.780Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
