@@ -9499,6 +9499,18 @@
         "dateTime": "2025-11-09T13:13:51.153Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "356caa5c-c8dc-4594-b841-c6c166a9c3ff",
+        "orderId": "701-8668666-8646641",
+        "productName": "Cereal Sucrilhos® Original Kellogg's® 1kg",
+        "quantity": 1,
+        "amount": 36.99,
+        "feitoPor": "",
+        "fornecedor": "Shopee - Norton Distribuidora",
+        "dateTime": "2025-11-09T13:14:12.667Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
