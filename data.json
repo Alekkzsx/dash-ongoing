@@ -9523,6 +9523,18 @@
         "dateTime": "2025-11-11T20:38:54.552Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "34ee3c24-5171-41d0-a4f0-4b91344219f6",
+        "orderId": "702-3054820-8513021",
+        "productName": "Densidade Shampoo 250ml , Lola Cosmetics",
+        "quantity": 1,
+        "amount": 36.34,
+        "feitoPor": "",
+        "fornecedor": "Shopee - Amor de Make Oficial",
+        "dateTime": "2025-11-11T20:39:58.096Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
