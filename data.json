@@ -9511,6 +9511,18 @@
         "dateTime": "2025-11-09T13:14:12.667Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "7740c724-25ca-4009-9e90-b79389af6a44",
+        "orderId": "702-3054820-8513021",
+        "productName": "Densidade Shampoo 250ml , Lola Cosmetics",
+        "quantity": 1,
+        "amount": 37.12,
+        "feitoPor": "Jessica souza da silva",
+        "fornecedor": "",
+        "dateTime": "2025-11-11T20:38:54.552Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
