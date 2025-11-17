@@ -9643,6 +9643,18 @@
         "dateTime": "2025-11-17T17:31:00.306Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "cac30187-4fdb-4b60-90cb-bdbc8b10302c",
+        "orderId": "702-5844989-5856254",
+        "productName": "CAFÉ MELITTA SABOR DA FAZENDA POUCH 500g",
+        "quantity": 1,
+        "amount": 52.41,
+        "feitoPor": "",
+        "fornecedor": "Shopee - Melitta",
+        "dateTime": "2025-11-17T17:31:33.345Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
