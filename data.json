@@ -9607,6 +9607,18 @@
         "dateTime": "2025-11-13T20:20:50.857Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "a73dccdb-6784-4f27-942c-4525edf83128",
+        "orderId": "701-2682090-5721865",
+        "productName": "Liquidificador Mondial, Turbo Power 550W, 110V, Preto, 1,6L - L-99 FB",
+        "quantity": 1,
+        "amount": 119.66,
+        "feitoPor": "Fernanda V Moura",
+        "fornecedor": "",
+        "dateTime": "2025-11-17T17:19:10.296Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
