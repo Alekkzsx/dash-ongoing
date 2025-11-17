@@ -9691,6 +9691,18 @@
         "dateTime": "2025-11-17T17:38:35.767Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "c83fc13e-f8fe-4790-923b-cad378904661",
+        "orderId": "701-2714430-3407405",
+        "productName": "Café Café Torrado e Moído Aroma de Caramelo 250g",
+        "quantity": 1,
+        "amount": 42.24,
+        "feitoPor": "",
+        "fornecedor": "Shopee - baggiocafe",
+        "dateTime": "2025-11-17T17:39:30.079Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
