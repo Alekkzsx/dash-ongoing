@@ -9739,6 +9739,18 @@
         "dateTime": "2025-11-17T17:48:15.047Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "333cb4df-3eb8-4912-a6fa-21cf61b9e2d6",
+        "orderId": "701-6849241-5485067",
+        "productName": "Café Baggio Torrado E Moido Aroma De Vanilla 250g",
+        "quantity": 4,
+        "amount": 151.6,
+        "feitoPor": "",
+        "fornecedor": "Shopee - baggiocafe",
+        "dateTime": "2025-11-17T17:50:41.537Z",
+        "type": "despesa",
+        "category": "custo-geral"
       }
     ]
   }
