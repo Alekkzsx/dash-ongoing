@@ -9679,6 +9679,18 @@
         "dateTime": "2025-11-17T17:34:39.269Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "e8fd48be-5230-41e5-8e83-dadcdcb8710e",
+        "orderId": "701-2714430-3407405",
+        "productName": "Café Café Torrado e Moído Aroma de Caramelo 250g",
+        "quantity": 1,
+        "amount": 64.21,
+        "feitoPor": "Deborah Rodrigues Kivitis Nogueira",
+        "fornecedor": "",
+        "dateTime": "2025-11-17T17:38:35.767Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
