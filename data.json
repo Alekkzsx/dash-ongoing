@@ -9667,6 +9667,18 @@
         "dateTime": "2025-11-17T17:33:41.453Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "c33e6bb2-5e15-4fd7-b581-849f292be097",
+        "orderId": "701-5544046-4892200",
+        "productName": "Baggio Café Café Torrado e Moído Bourbon 250g",
+        "quantity": 1,
+        "amount": 35.83,
+        "feitoPor": "",
+        "fornecedor": "Shopee - baggiocafe",
+        "dateTime": "2025-11-17T17:34:39.269Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
