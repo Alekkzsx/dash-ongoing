@@ -9619,6 +9619,18 @@
         "dateTime": "2025-11-17T17:19:10.296Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "5dfb8533-97d9-4b6a-9722-84dab941e49f",
+        "orderId": "701-2682090-5721865",
+        "productName": "Liquidificador Mondial, Turbo Power 550W, 110V, Preto, 1,6L - L-99 FB",
+        "quantity": 1,
+        "amount": 114.06,
+        "feitoPor": "",
+        "fornecedor": "Shopee - LOI BRASIL",
+        "dateTime": "2025-11-17T17:23:58.368Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
