@@ -9655,6 +9655,18 @@
         "dateTime": "2025-11-17T17:31:33.345Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "a928669f-d1c9-4e60-856d-aa15b33c07f3",
+        "orderId": "701-5544046-4892200",
+        "productName": "Baggio Café Café Torrado e Moído Bourbon 250g",
+        "quantity": 1,
+        "amount": 40.53,
+        "feitoPor": "Fernanda Ariza Lacanna",
+        "fornecedor": "",
+        "dateTime": "2025-11-17T17:33:41.453Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
