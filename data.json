@@ -9823,6 +9823,18 @@
         "dateTime": "2025-11-18T16:30:19.516Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "02c86c9f-a31a-4186-8422-57a58f93c863",
+        "orderId": "701-5191269-6125867",
+        "productName": "Baggio Café Café Torrado e Moído Premium Caffè.com 250g",
+        "quantity": 1,
+        "amount": 51.25,
+        "feitoPor": "Andreia Santos",
+        "fornecedor": "",
+        "dateTime": "2025-11-18T16:35:44.920Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
