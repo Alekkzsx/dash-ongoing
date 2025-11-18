@@ -9775,6 +9775,18 @@
         "dateTime": "2025-11-18T16:20:03.828Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "e16a16e9-80d4-4ce9-9b14-f61a4b8b617e",
+        "orderId": "701-6200766-5345008",
+        "productName": "Baggio Café Café Torrado e Moído Bourbon 250g",
+        "quantity": 1,
+        "amount": 40.53,
+        "feitoPor": "Mirella Park",
+        "fornecedor": "",
+        "dateTime": "2025-11-18T16:25:00.824Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
