@@ -9799,6 +9799,18 @@
         "dateTime": "2025-11-18T16:25:16.623Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "6132295f-c2ce-479a-b6f1-0eba9d271138",
+        "orderId": "702-9925360-9645867",
+        "productName": "CAFÉ MELITTA SABOR DA FAZENDA POUCH 500g",
+        "quantity": 1,
+        "amount": 69.83,
+        "feitoPor": "Maria herlene bezerra de negreiros lima",
+        "fornecedor": "",
+        "dateTime": "2025-11-18T16:30:01.657Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
