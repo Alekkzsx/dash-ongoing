@@ -9859,6 +9859,18 @@
         "dateTime": "2025-11-20T17:07:32.605Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "f04fe0cc-1672-4b82-bac0-34813cc47c86",
+        "orderId": "702-8334823-1055462",
+        "productName": "Café Japy Orfeu Torrado e Moído 100% Arabica, 250g",
+        "quantity": 1,
+        "amount": 90.82,
+        "feitoPor": "",
+        "fornecedor": "Shopee",
+        "dateTime": "2025-11-20T17:10:26.251Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
