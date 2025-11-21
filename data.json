@@ -10003,6 +10003,18 @@
         "dateTime": "2025-11-21T13:20:50.408Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "97b262c9-99ea-4ae4-87bd-e999568e9e02",
+        "orderId": "702-0192619-8621842",
+        "productName": "Baggio Café Café Torrado e Moído Aroma de Chocolate com Avelã 250g",
+        "quantity": 1,
+        "amount": 41.32,
+        "feitoPor": "",
+        "fornecedor": "Shopee",
+        "dateTime": "2025-11-21T13:28:31.524Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
