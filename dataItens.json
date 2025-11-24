@@ -1,39 +1,24 @@
 {
   "infiverye.boss@gmail.com": [
     {
-      "id": "57718f3e-5879-42f5-a8fe-b38d64456875",
-      "name": "Fone de Ouvido Bluetooth",
-      "quantity": 26,
-      "price": 116,
-      "suppliers": []
-    },
-    {
-      "id": "5994a55d-afe3-4b92-b305-3f85d8e60ef8",
-      "name": "Capa de Silicone para iPhone",
-      "quantity": 23,
-      "price": 108,
-      "suppliers": []
-    },
-    {
-      "id": "e222f0ea-d5ed-42a5-a8cc-e503fd611080",
-      "name": "Carregador Portátil 20000mAh",
-      "quantity": 48,
-      "price": 146,
-      "suppliers": []
-    },
-    {
-      "id": "a7a89f8d-92cb-421a-b17e-f03c158d3ebc",
-      "name": "Mouse sem Fio Ergonômico",
-      "quantity": 43,
-      "price": 65,
-      "suppliers": []
-    },
-    {
-      "id": "d75a675d-19e3-474d-8262-d9920f95fdca",
-      "name": "Teclado Mecânico RGB",
-      "quantity": 59,
-      "price": 131,
-      "suppliers": []
+      "id": "7b7cdff0-1277-48a8-96f9-44ecbd3b38ae",
+      "name": "baggio 1",
+      "quantity": 10,
+      "price": 34.9,
+      "suppliers": [
+        {
+          "id": "1a2ef565-2109-44d3-8809-e71c7c4c3eee",
+          "url": "https://shopee.com.br/Baggio-Caf%C3%A9-Espresso-Gr%C3%A3o-500g-i.1321479779.23193718389?sp_atk=d1e563ef-b1fa-426d-8ed4-c6c4de032432&xptdk=d1e563ef-b1fa-426d-8ed4-c6c4de032432",
+          "xpath": "//*[@id=\"sll2-normal-pdp-main\"]/div/div/div/div[2]/section/section[2]/div/div[3]/div/section/div/div[1]",
+          "currentPrice": 21.27
+        },
+        {
+          "id": "b6951e7a-d4f9-4c41-bcc8-0a6a7b00d992",
+          "url": "https://baggiocafe.com.br/products/baggio-cafe-espresso-500g-graos",
+          "xpath": "//*[@id=\"price-template--16725642739799__main\"]/span[2]/span",
+          "currentPrice": 22.43
+        }
+      ]
     }
   ]
 }
