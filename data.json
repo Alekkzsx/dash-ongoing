@@ -10195,6 +10195,18 @@
         "dateTime": "2025-11-24T12:21:28.900Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "0a8c3832-906c-4c82-8b84-364421058c26",
+        "orderId": "702-0640592-6483467",
+        "productName": "Orfeu Café Bourbon Amarelo em Grãos, 100% Arabica, Torra Média Clara 250g",
+        "quantity": 1,
+        "amount": 44.1,
+        "feitoPor": "",
+        "fornecedor": "shp",
+        "dateTime": "2025-11-24T12:21:48.987Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
