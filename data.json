@@ -10063,6 +10063,18 @@
         "dateTime": "2025-11-21T13:48:03.217Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "e5c319ce-0036-4307-9143-25509b0ec4d4",
+        "orderId": "701-3220591-7259441",
+        "productName": "Bolsa Feminina Grande com alça transversal Santorini Handbag (preto)",
+        "quantity": 1,
+        "amount": 107.75,
+        "feitoPor": "sopara",
+        "fornecedor": "",
+        "dateTime": "2025-11-24T11:52:19.713Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
