@@ -10279,6 +10279,18 @@
         "dateTime": "2025-11-25T18:02:37.891Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "59b8a288-3fc4-4458-b8e6-a68514f8586c",
+        "orderId": "702-0622601-9897827",
+        "productName": "3 Corações Café Torrado e Moído Gourmet Portinari, Notas Frutadas, 250G",
+        "quantity": 1,
+        "amount": 77.76,
+        "feitoPor": "infiverye",
+        "fornecedor": "",
+        "dateTime": "2025-11-25T18:09:17.068Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
