@@ -10231,6 +10231,18 @@
         "dateTime": "2025-11-25T17:29:54.679Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "049b5d2e-f757-4893-9cfa-1dafa6dde15c",
+        "orderId": "702-9831158-0774606",
+        "productName": "Café Arara Orfeu em Grãos, 100% Arabica 250g",
+        "quantity": 1,
+        "amount": 60.37,
+        "feitoPor": "sopara",
+        "fornecedor": "",
+        "dateTime": "2025-11-25T17:33:05.448Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
