@@ -10411,6 +10411,18 @@
         "dateTime": "2025-11-26T20:49:24.950Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "af379883-277b-4a2d-998e-02ffde0871d7",
+        "orderId": "701-3513763-0272225",
+        "productName": "3 Corações Café Torrado e Moído Gourmet Portinari, Notas Frutadas, 250G",
+        "quantity": 1,
+        "amount": 30.3,
+        "feitoPor": "",
+        "fornecedor": "alex - mercafe",
+        "dateTime": "2025-11-26T20:59:47.606Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
