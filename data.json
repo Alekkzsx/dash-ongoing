@@ -10699,6 +10699,18 @@
         "dateTime": "2025-11-28T23:47:31.006Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "2a4ed344-99b3-4200-894c-df04aaeb1482",
+        "orderId": "702-5322839-8781818",
+        "productName": "Hemmer Ketchup Tradicional Bisnaga 1kg/Dolce Gusto Nescafe Café Au Lait 10 Cápsulas- embalagem variável/Ketchup Heinz Tradicional 1,033KG",
+        "quantity": 1,
+        "amount": 50.47,
+        "feitoPor": "",
+        "fornecedor": "amz",
+        "dateTime": "2025-11-28T23:50:08.591Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
