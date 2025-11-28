@@ -10723,6 +10723,18 @@
         "dateTime": "2025-11-28T23:53:44.331Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "ac3f3c40-36ed-422c-a77d-f54c8999b47f",
+        "orderId": "702-2035956-6874643",
+        "productName": "CAFÉ MELITTA SABOR DA FAZENDA POUCH 500g",
+        "quantity": 1,
+        "amount": 53.93,
+        "feitoPor": "",
+        "fornecedor": "shp",
+        "dateTime": "2025-11-28T23:58:15.017Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
