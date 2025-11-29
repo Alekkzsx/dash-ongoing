@@ -10771,6 +10771,18 @@
         "dateTime": "2025-11-29T00:04:35.578Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "010f0079-d76a-478b-af86-c7f482090522",
+        "orderId": "702-9556849-8582614",
+        "productName": "Ketchup Heinz Tradicional 1,033KG",
+        "quantity": 1,
+        "amount": 23.6,
+        "feitoPor": "",
+        "fornecedor": "amz",
+        "dateTime": "2025-11-29T00:06:07.065Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
