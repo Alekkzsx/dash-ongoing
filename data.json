@@ -10807,6 +10807,18 @@
         "dateTime": "2025-11-29T00:10:29.995Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "1730f721-5000-43c6-946e-1c6c5ab28061",
+        "orderId": "702-3072012-0586605",
+        "productName": "Baggio Café Café Torrado e Moído Espresso 250g",
+        "quantity": 1,
+        "amount": 64.93,
+        "feitoPor": "alekk",
+        "fornecedor": "",
+        "dateTime": "2025-11-29T00:14:03.970Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
