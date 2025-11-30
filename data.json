@@ -10987,6 +10987,18 @@
         "dateTime": "2025-11-30T22:31:10.214Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "d9e52c56-80fe-45ea-b73c-5355a6e3b6cf",
+        "orderId": "702-2081182-0528211",
+        "productName": "Densidade Máscara Capilar 230g , Lola Cosmetics",
+        "quantity": 1,
+        "amount": 29.98,
+        "feitoPor": "",
+        "fornecedor": "shp",
+        "dateTime": "2025-11-30T22:34:18.098Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
