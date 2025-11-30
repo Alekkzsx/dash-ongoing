@@ -10831,6 +10831,18 @@
         "dateTime": "2025-11-29T00:17:26.101Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "08b3dccd-8bd2-4410-ab5a-b741fcb3cd5e",
+        "orderId": "702-6263070-5189848",
+        "productName": "Baggio Café Café Torrado e Moído Aroma de Chocolate Trufado 250g",
+        "quantity": 1,
+        "amount": 54.85,
+        "feitoPor": "alekk",
+        "fornecedor": "",
+        "dateTime": "2025-11-30T21:38:02.051Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
