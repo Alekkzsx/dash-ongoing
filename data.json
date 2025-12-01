@@ -11299,6 +11299,18 @@
         "dateTime": "2025-12-01T21:01:29.313Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "0978f549-aa41-4816-acf5-31bac4cb3a11",
+        "orderId": "702-9912163-8701852",
+        "productName": "3 Corações Café Torrado e Moído Tradicional, 500g vácuo",
+        "quantity": 1,
+        "amount": 44.61,
+        "feitoPor": "",
+        "fornecedor": "shp",
+        "dateTime": "2025-12-01T21:05:32.031Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
