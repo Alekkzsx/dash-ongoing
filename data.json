@@ -11179,6 +11179,18 @@
         "dateTime": "2025-12-01T19:16:52.445Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "504f9b72-e854-4234-9638-30f58567c1a4",
+        "orderId": "701-0277179-6173842",
+        "productName": "Fralda descartável Pampers Supersequinha, Tamanho G 80 Unidades",
+        "quantity": 1,
+        "amount": 571.88,
+        "feitoPor": "",
+        "fornecedor": "shp",
+        "dateTime": "2025-12-01T19:20:28.684Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
