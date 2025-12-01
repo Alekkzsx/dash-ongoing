@@ -11071,6 +11071,18 @@
         "dateTime": "2025-12-01T13:37:40.402Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "28b58646-4dbf-4c71-889a-05ccde82f1cc",
+        "orderId": "702-1080060-1902657",
+        "productName": "Baggio Café Café Torrado e Moído Aroma de Caramelo 250g",
+        "quantity": 1,
+        "amount": 63.23,
+        "feitoPor": "alekk",
+        "fornecedor": "",
+        "dateTime": "2025-12-01T13:42:27.723Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
