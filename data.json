@@ -11287,6 +11287,18 @@
         "dateTime": "2025-12-01T20:57:19.591Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "9ba1cdd1-b005-4c13-8f3d-0f7be37bac8d",
+        "orderId": "702-9912163-8701852",
+        "productName": "3 Corações Café Torrado e Moído Tradicional, 500g vácuo",
+        "quantity": 1,
+        "amount": 58.46,
+        "feitoPor": "alekk",
+        "fornecedor": "",
+        "dateTime": "2025-12-01T21:01:29.313Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
