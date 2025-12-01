@@ -11131,6 +11131,18 @@
         "dateTime": "2025-12-01T14:09:41.596Z",
         "type": "receita",
         "category": "venda-produto"
+      },
+      {
+        "id": "1a253d2a-df68-4d92-a1c3-57d767100eba",
+        "orderId": "702-7511773-5421038",
+        "productName": "Personal Papel Higiênico Vip Folha Tripla Com 12 Rolos De 20M",
+        "quantity": 1,
+        "amount": 38.19,
+        "feitoPor": "",
+        "fornecedor": "shp",
+        "dateTime": "2025-12-01T14:12:04.504Z",
+        "type": "despesa",
+        "category": "custo-produto"
       }
     ]
   }
