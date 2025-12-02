@@ -11359,6 +11359,18 @@
         "dateTime": "2025-12-01T21:17:48.986Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "5d38514a-92bd-45e0-bbca-81f06c98b986",
+        "orderId": "702-7803023-1929031",
+        "productName": "Comfort Amaciante Concentrado Frescor Intenso 1,5 L",
+        "quantity": 1,
+        "amount": 47.87,
+        "feitoPor": "alekk",
+        "fornecedor": "",
+        "dateTime": "2025-12-02T18:10:04.600Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
