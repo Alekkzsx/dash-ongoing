@@ -11575,6 +11575,18 @@
         "dateTime": "2025-12-02T19:54:15.312Z",
         "type": "despesa",
         "category": "custo-produto"
+      },
+      {
+        "id": "68fbdf36-f887-494a-b27b-3d70a0cdc3e4",
+        "orderId": "702-5992284-1367449",
+        "productName": "CAFÉ REGIÕES BRASILEIRAS MOGIANA 250G",
+        "quantity": 1,
+        "amount": 59.57,
+        "feitoPor": "sopara",
+        "fornecedor": "",
+        "dateTime": "2025-12-02T20:07:09.489Z",
+        "type": "receita",
+        "category": "venda-produto"
       }
     ]
   }
